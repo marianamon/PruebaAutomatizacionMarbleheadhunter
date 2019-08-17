@@ -21,6 +21,7 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import utils.BaseClass;
 import java.util.concurrent.TimeUnit;
 
@@ -59,15 +60,32 @@ public class ConsultaGooglePage extends BaseClass {
     
   
     /**
-	 * Metodo para seleccionar consulta correcta,obtener los resultados de esta y comparar 
-	 * contra el resultado esperado
+	 * Metodo para validar que se retorna la palabra correcta en google y seleccionarla
 	 */	
     @FindBy(how = How.XPATH, using = "//b/i") WebElement lblcorrecto;
-    public  void verificarTest () throws Exception {
+    public  void verificarPalabra() throws Exception {
+    	
+    	String ValorEsperado="pruebas";
+    	String ValorRetornado= lblcorrecto.getText();
+    	
+    	Assert.assertEquals(ValorEsperado, ValorRetornado);
+    	
+    	Log.info("***********************************************************************************************************");
+		Log.info("La palabra corregida por google es: " + ValorRetornado);
+		Log.info("***********************************************************************************************************");
+	
     	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         PageFactory.initElements(driver, this);
         lblcorrecto.click();
+    }
+    
 
+    /**
+	 * Metodo para obtener los resultados de la consulta en google y comparar 
+	 * contra el resultado esperado
+	 */	
+    public  void verificarTest () throws Exception {
+    	
          String userAgent ="Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36"; 
          Document document = Jsoup.connect("https://www.google.com/search?q=pruebaz&rlz=1C1CHBF_esCO848CO848&oq=pruebaz&aqs=chrome.0.69i59j0l4j69i60.2782j0j7&sourceid=chrome&ie=UTF-8").userAgent(userAgent).get();
          Elements links = document.select( "h3");

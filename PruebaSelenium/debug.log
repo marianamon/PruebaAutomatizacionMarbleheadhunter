@@ -1,0 +1,6 @@
+[0803/195313.883:ERROR:process_info.cc(359)] UncheckedAllocate
+[0803/195329.358:ERROR:process_info.cc(359)] UncheckedAllocate
+[0803/200012.099:ERROR:crashpad_client_win.cc(491)] CreateProcess: El archivo de paginación es demasiado pequeño para completar la operación. (0x5AF)
+[0803/200951.616:ERROR:process_info.cc(359)] UncheckedAllocate
+[0803/200951.706:ERROR:process_info.cc(359)] UncheckedAllocate
+[0803/215512.512:ERROR:file_io_win.cc(179)] CreateFile C:\Users\user\AppData\Local\Temp\scoped_dir8712_2615\Crashpad\settings.dat: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso. (0x20)
