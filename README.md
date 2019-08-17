@@ -57,9 +57,5 @@ Autores ✒️
 Mariana Alzate
 
 
-Licencia 📄
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo LICENSE.md para detalles
-
-
 Gracias📢
 
