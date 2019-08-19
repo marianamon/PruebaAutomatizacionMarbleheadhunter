@@ -45,10 +45,15 @@ Ejecutando las pruebas ⚙️
 Construido con 🛠️ 
 
 Selenium Webdriver - API para ejecuciòn de comandos y localizadores de objetos en el DOM
+
 Cucumber - Framework BDD
+
 Gradle - Inyecciòn de dependencias
+
 Loj4j  - Usado para el manejo de dependencias
-PageObject+PacFactory - Patron de diseño
+
+PageObject+PacFactory - Patron de 
+
 TestNG - Framework de ejecuciòn.
 
 
