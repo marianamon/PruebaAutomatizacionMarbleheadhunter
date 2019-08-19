@@ -52,7 +52,7 @@ Gradle - Inyecciòn de dependencias
 
 Loj4j  - Usado para el manejo de dependencias
 
-PageObject+PacFactory - Patron de 
+PageObject+PacFactory - Patron de diseño
 
 TestNG - Framework de ejecuciòn.
 
